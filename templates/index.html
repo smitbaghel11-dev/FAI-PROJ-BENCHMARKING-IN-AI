@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>BenchmarkIQ — Apple vs Samsung 2023</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
+<header class="hdr">
+  <div class="hdr__inner">
+    <div class="hdr__logo">
+      <span class="hdr__logo-mark">⚡</span>
+      <span class="hdr__logo-text">BenchmarkIQ</span>
+    </div>
+    <nav class="hdr__nav">
+      <a href="#section-form">Compare</a>
+      <a href="#section-scores">Scores</a>
+      <a href="#section-insights">Insights</a>
+      <div class="dl-menu">
+        <button class="btn-ghost">Download ▾</button>
+        <div class="dl-menu__drop">
+          <a href="/api/download/csv"  class="dl-menu__item">📊 Dataset CSV</a>
+          <a href="/api/download/json" class="dl-menu__item">📋 Dataset JSON</a>
+          <a href="/api/download/sql"  class="dl-menu__item">🗄️  SQL Schema</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__glow hero__glow--a"></div>
+  <div class="hero__glow hero__glow--b"></div>
+  <div class="hero__content">
+    <div class="hero__pill">Technology Industry · FY 2023 · Real Verified Data</div>
+    <h1 class="hero__title">Company Benchmark<br/>Comparison Engine</h1>
+    <p class="hero__sub">
+      Analyze Apple &amp; Samsung across <strong>13 metrics</strong> in
+      <strong>5 categories</strong> using data from official annual reports,
+      IDC, Glassdoor, ACSI, Bain &amp; USPTO.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     COMPARE FORM
+════════════════════════════════════════════ -->
+<section class="wrap" id="section-form">
+  <div class="form-card">
+    <h2 class="section-title">⚙️ Configure Comparison</h2>
+    <div class="form-row">
+
+      <div class="form-group">
+        <label for="sel-a">Company A</label>
+        <select id="sel-a">
+          <option value="apple">🍎 Apple Inc. (AAPL)</option>
+          <option value="samsung">📱 Samsung Electronics</option>
+        </select>
+      </div>
+
+      <div class="vs-badge">VS</div>
+
+      <div class="form-group">
+        <label for="sel-b">Company B</label>
+        <select id="sel-b">
+          <option value="samsung">📱 Samsung Electronics</option>
+          <option value="apple">🍎 Apple Inc. (AAPL)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sel-cat">Benchmark Category</label>
+        <select id="sel-cat">
+          <option value="all">All Categories</option>
+          <option value="financial">💰 Financial</option>
+          <option value="performance">📈 Performance</option>
+          <option value="internal">👥 Internal / HR</option>
+          <option value="customer">⭐ Customer</option>
+          <option value="innovation">🔬 Innovation</option>
+        </select>
+      </div>
+
+    </div>
+    <button class="btn-primary" id="btn-compare" onclick="runComparison()">
+      <span>⚡</span> Run Comparison
+    </button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     LOADING
+════════════════════════════════════════════ -->
+<div class="loader" id="loader" style="display:none">
+  <div class="loader__ring"></div>
+  <p>Crunching benchmark data…</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     RESULTS  (hidden until comparison runs)
+════════════════════════════════════════════ -->
+<div id="results" style="display:none">
+
+  <!-- ── SCORE HEADER ── -->
+  <section class="score-section" id="section-scores">
+    <div class="wrap">
+      <div class="score-grid">
+
+        <div class="score-card score-card--a" id="sc-a">
+          <div class="score-card__winner-tag" id="winner-tag-a" style="display:none">🏆 Winner</div>
+          <div class="score-card__company" id="sc-name-a">—</div>
+          <div class="score-card__value"   id="sc-val-a">—</div>
+          <div class="score-card__label">Overall Score / 100</div>
+          <div class="score-card__bar-wrap">
+            <div class="score-card__bar score-card__bar--a" id="sc-bar-a"></div>
+          </div>
+        </div>
+
+        <div class="score-center">
+          <div class="score-center__winner" id="overall-winner-name">—</div>
+          <div class="score-center__sub">Overall Winner</div>
+          <div class="score-center__delta" id="overall-delta">—</div>
+        </div>
+
+        <div class="score-card score-card--b" id="sc-b">
+          <div class="score-card__winner-tag" id="winner-tag-b" style="display:none">🏆 Winner</div>
+          <div class="score-card__company" id="sc-name-b">—</div>
+          <div class="score-card__value"   id="sc-val-b">—</div>
+          <div class="score-card__label">Overall Score / 100</div>
+          <div class="score-card__bar-wrap">
+            <div class="score-card__bar score-card__bar--b" id="sc-bar-b"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHARTS ── -->
+  <section class="charts-section">
+    <div class="wrap">
+      <h2 class="section-title">📊 Visual Comparison</h2>
+      <div class="charts-grid">
+        <div class="chart-card">
+          <p class="chart-card__title">Score Breakdown by Category</p>
+          <canvas id="radarChart"></canvas>
+        </div>
+        <div class="chart-card">
+          <p class="chart-card__title">Metric-by-Metric Scores</p>
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── METRIC TABLES ── -->
+  <section class="metrics-section">
+    <div class="wrap">
+      <h2 class="section-title">📋 Detailed Metric Breakdown</h2>
+      <div id="metric-tables"></div>
+    </div>
+  </section>
+
+  <!-- ── INSIGHTS ── -->
+  <section class="insights-section" id="section-insights">
+    <div class="wrap">
+      <h2 class="section-title">🧠 AI-Powered Insights</h2>
+      <div class="insights-grid" id="insights-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── DATA SOURCES ── -->
+  <section class="sources-section">
+    <div class="wrap">
+      <h2 class="section-title">📚 Data Sources & Methodology</h2>
+      <p class="sources-note">All data from FY 2023. Samsung financial figures converted from KRW at avg 2023 rate ≈ 1,305 KRW/USD.</p>
+      <div class="sources-list" id="sources-list"></div>
+    </div>
+  </section>
+
+</div><!-- /results -->
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p>BenchmarkIQ &nbsp;·&nbsp; Python Flask + Chart.js &nbsp;·&nbsp; Data: FY 2023</p>
+    <p class="site-footer__note">For educational and analytical purposes only. Not financial advice.</p>
+  </div>
+</footer>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

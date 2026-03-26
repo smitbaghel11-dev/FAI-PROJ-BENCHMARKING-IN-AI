@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "data_year": 2023,
+    "currency": "USD",
+    "note": "All monetary values in USD Billions unless stated. Samsung figures converted from KRW at avg 2023 rate ~1,305 KRW/USD.",
+    "sources": [
+      "Apple Inc. Form 10-K FY2023 (filed Oct 2023)",
+      "Samsung Electronics Annual Report 2023",
+      "IDC Worldwide Quarterly Mobile Phone Tracker Q4 2023",
+      "Glassdoor Company Reviews – Apple & Samsung (2023 avg)",
+      "American Customer Satisfaction Index (ACSI) 2023",
+      "Net Promoter Score Benchmarks – Bain & Company 2023",
+      "Yahoo Finance / Macrotrends Financial Data 2023",
+      "USPTO Patent Activity 2023",
+      "Interbrand Best Global Brands 2023"
+    ]
+  },
+  "companies": [
+    {
+      "id": "apple",
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "industry": "Technology",
+      "founded": 1976,
+      "hq": "Cupertino, CA, USA",
+      "logo_color": "#60A5FA",
+      "financial": {
+        "revenue":          383.3,
+        "gross_profit":     169.1,
+        "net_income":        97.0,
+        "profit_margin":     25.3,
+        "market_cap":      2994.0,
+        "market_share_smartphones": 18.8,
+        "operating_margin":  29.8,
+        "operating_expenses": 54.8
+      },
+      "performance": {
+        "revenue_growth_yoy":  -2.8,
+        "net_income_growth":   -2.8,
+        "revenue_per_employee": 2.39,
+        "return_on_equity":   147.9,
+        "asset_turnover":       1.09
+      },
+      "internal": {
+        "total_employees":        161000,
+        "employee_growth_yoy":      -1.0,
+        "glassdoor_rating":          4.2,
+        "avg_salary_usd":         175000,
+        "female_workforce_pct":       35
+      },
+      "customer": {
+        "nps_score":                  72,
+        "csat_score":                8.5,
+        "brand_value_usd":         297.5,
+        "retention_rate_pct":         92,
+        "positive_reviews_pct":       88
+      },
+      "innovation": {
+        "rd_spending":               29.9,
+        "rd_pct_of_revenue":          7.8,
+        "patents_filed":             2468,
+        "new_products_launched":       12,
+        "tech_adoption_index":        9.1
+      }
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung Electronics",
+      "ticker": "005930.KS",
+      "industry": "Technology",
+      "founded": 1969,
+      "hq": "Suwon, South Korea",
+      "logo_color": "#F472B6",
+      "financial": {
+        "revenue":          224.0,
+        "gross_profit":      64.7,
+        "net_income":        13.6,
+        "profit_margin":      6.1,
+        "market_cap":       374.0,
+        "market_share_smartphones": 19.4,
+        "operating_margin":   4.9,
+        "operating_expenses": 46.2
+      },
+      "performance": {
+        "revenue_growth_yoy":  -14.3,
+        "net_income_growth":   -72.6,
+        "revenue_per_employee":  0.82,
+        "return_on_equity":      4.8,
+        "asset_turnover":        0.61
+      },
+      "internal": {
+        "total_employees":        270372,
+        "employee_growth_yoy":      -2.1,
+        "glassdoor_rating":          3.8,
+        "avg_salary_usd":          68000,
+        "female_workforce_pct":       28
+      },
+      "customer": {
+        "nps_score":                  48,
+        "csat_score":                7.4,
+        "brand_value_usd":           91.4,
+        "retention_rate_pct":         74,
+        "positive_reviews_pct":       78
+      },
+      "innovation": {
+        "rd_spending":               21.2,
+        "rd_pct_of_revenue":          9.5,
+        "patents_filed":             8513,
+        "new_products_launched":       28,
+        "tech_adoption_index":        8.3
+      }
+    }
+  ]
+}
