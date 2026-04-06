@@ -1,21 +1,16 @@
 """
-BenchmarkIQ — Flask Backend
-============================
-Full benchmark comparison engine for Apple Inc. vs Samsung Electronics.
+CEPA - Comparative Ethical Policy Auditor
+==========================================
+AI Policy & Ethics Benchmarking System
 
-Data Sources (FY 2023):
-  • Apple Inc. Form 10-K (Oct 2023)
-  • Samsung Electronics Annual Report 2023
-  • IDC Worldwide Mobile Phone Tracker Q4 2023
-  • Glassdoor Company Reviews 2023
-  • American Customer Satisfaction Index (ACSI) 2023
-  • Net Promoter Score Benchmarks – Bain & Company 2023
-  • USPTO Patent Activity 2023
-  • Interbrand Best Global Brands 2023
+Focus: Analysis of official AI policies from 6 companies
+Dimensions: Privacy, Transparency, Liability, User Rights
+
+Companies: Perplexity AI, OpenAI, Google, Anthropic, Meta, DeepSeek
 
 Run:
   python app.py
-  → http://localhost:5000
+  → http://localhost:8000
 """
 
 import json
@@ -63,150 +58,85 @@ META       = _raw["metadata"]
 #  display info, and scoring direction.
 # ─────────────────────────────────────────────
 METRIC_CATALOGUE = {
-    "financial": {
-        "label": "Financial Metrics",
-        "icon":  "💰",
+    "ai_policy": {
+        "label": "AI Policy & Ethics",
+        "icon":  "⚖️",
         "items": [
             {
-                "key":              "revenue",
-                "label":            "Revenue",
-                "path":             "financial.revenue",
-                "unit":             "B USD",
-                "higher_is_better": True,
-                "description":      "Total annual revenue (USD Billions)",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-            {
-                "key":              "profit_margin",
-                "label":            "Profit Margin",
-                "path":             "financial.profit_margin",
-                "unit":             "%",
-                "higher_is_better": True,
-                "description":      "Net income as % of revenue",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-            {
-                "key":              "market_share",
-                "label":            "Smartphone Market Share",
-                "path":             "financial.market_share_smartphones",
-                "unit":             "%",
-                "higher_is_better": True,
-                "description":      "Global smartphone shipment share Q4 2023",
-                "source":           "IDC Worldwide Mobile Phone Tracker Q4 2023"
-            },
-        ]
-    },
-    "performance": {
-        "label": "Performance Metrics",
-        "icon":  "📈",
-        "items": [
-            {
-                "key":              "revenue_growth",
-                "label":            "Revenue Growth (YoY)",
-                "path":             "performance.revenue_growth_yoy",
-                "unit":             "%",
-                "higher_is_better": True,
-                "description":      "Year-over-year revenue change",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-            {
-                "key":              "revenue_per_employee",
-                "label":            "Revenue per Employee",
-                "path":             "performance.revenue_per_employee",
-                "unit":             "M USD",
-                "higher_is_better": True,
-                "description":      "Productivity proxy: revenue ÷ headcount",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-            {
-                "key":              "operating_margin",
-                "label":            "Operating Efficiency",
-                "path":             "financial.operating_margin",
-                "unit":             "%",
-                "higher_is_better": True,
-                "description":      "Operating income as % of revenue",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-        ]
-    },
-    "internal": {
-        "label": "Internal / HR Metrics",
-        "icon":  "👥",
-        "items": [
-            {
-                "key":              "glassdoor_rating",
-                "label":            "Employee Satisfaction",
-                "path":             "internal.glassdoor_rating",
-                "unit":             "/ 5",
-                "higher_is_better": True,
-                "description":      "Average Glassdoor rating (2023 average)",
-                "source":           "Glassdoor Company Reviews 2023"
-            },
-            {
-                "key":              "employee_growth",
-                "label":            "Employee Growth (YoY)",
-                "path":             "internal.employee_growth_yoy",
-                "unit":             "%",
-                "higher_is_better": True,
-                "description":      "Year-over-year headcount change",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-        ]
-    },
-    "customer": {
-        "label": "Customer Metrics",
-        "icon":  "⭐",
-        "items": [
-            {
-                "key":              "csat_score",
-                "label":            "Customer Satisfaction",
-                "path":             "customer.csat_score",
+                "key":              "privacy_score",
+                "label":            "Privacy Protection Score",
+                "path":             "ai_policy.privacy_score",
                 "unit":             "/ 10",
                 "higher_is_better": True,
-                "description":      "ACSI score normalised to 10-point scale (2023)",
-                "source":           "American Customer Satisfaction Index 2023"
+                "description":      "Data privacy & user consent clarity in terms of service",
+                "source":           "Policy document analysis 2023",
+                "rationale":        "Scores based on: explicit consent mechanisms, data minimization practices, user opt-out rights, no data selling, and GDPR/privacy compliance language."
             },
             {
-                "key":              "nps_score",
-                "label":            "Net Promoter Score",
-                "path":             "customer.nps_score",
-                "unit":             "pts",
+                "key":              "transparency_score",
+                "label":            "Transparency & Explainability",
+                "path":             "ai_policy.transparency_score",
+                "unit":             "/ 10",
                 "higher_is_better": True,
-                "description":      "NPS – how likely customers are to recommend",
-                "source":           "Bain & Company NPS Benchmarks 2023"
+                "description":      "Clarity on AI decision-making and model limitations",
+                "source":           "Policy document analysis 2023",
+                "rationale":        "Scores based on: public documentation of AI methods, disclosed model limitations, bias testing & mitigation practices, and explainability for algorithmic decisions."
+            },
+            {
+                "key":              "liability_score",
+                "label":            "Liability & Safety",
+                "path":             "ai_policy.liability_score",
+                "unit":             "/ 10",
+                "higher_is_better": True,
+                "description":      "Clear responsibility & safety guardrails in policy",
+                "source":           "Policy document analysis 2023",
+                "rationale":        "Scores based on: liability clarity, safety testing requirements, incident reporting procedures, content moderation frameworks, and responsibility statements."
+            },
+            {
+                "key":              "user_rights_score",
+                "label":            "User Rights & Control",
+                "path":             "ai_policy.user_rights_score",
+                "unit":             "/ 10",
+                "higher_is_better": True,
+                "description":      "Rights to access, delete, and control personal data usage",
+                "source":           "Policy document analysis 2023",
+                "rationale":        "Scores based on: data access rights, deletion/portability rights, opt-out mechanisms, right to explanation, and user control over AI profiling."
             },
         ]
     },
-    "innovation": {
-        "label": "Innovation Metrics",
-        "icon":  "🔬",
+    "values_accountability": {
+        "label": "Values & Accountability",
+        "icon":  "🤝",
         "items": [
             {
-                "key":              "new_products",
-                "label":            "New Products Launched",
-                "path":             "innovation.new_products_launched",
-                "unit":             "units",
-                "higher_is_better": True,
-                "description":      "Major new product / SKU launches in 2023",
-                "source":           "Company press releases / annual reports"
-            },
-            {
-                "key":              "rd_spending",
-                "label":            "R&D Spending",
-                "path":             "innovation.rd_spending",
-                "unit":             "B USD",
-                "higher_is_better": True,
-                "description":      "Research & development expenditure (USD Billions)",
-                "source":           "Apple 10-K / Samsung Annual Report 2023"
-            },
-            {
-                "key":              "tech_adoption",
-                "label":            "Tech Adoption Index",
-                "path":             "innovation.tech_adoption_index",
+                "key":              "gov_collaboration_score",
+                "label":            "Government & Surveillance Stance",
+                "path":             "values_accountability.gov_collaboration_score",
                 "unit":             "/ 10",
                 "higher_is_better": True,
-                "description":      "Composite index: AI, 5G, chip integration, platform ecosystem",
-                "source":           "Composite – analyst estimates 2023"
+                "description":      "Resistance to surveillance, government cooperation, and data sharing clarity",
+                "source":           "Public statements & policy analysis 2024",
+                "rationale":        "Higher scores: resist excessive government data requests, publish transparency reports, limit law enforcement cooperation. Lower scores: cooperate with surveillance programs, government access agreements."
+            },
+            {
+                "key":              "geopolitical_score",
+                "label":            "Geopolitical Independence & Values",
+                "path":             "values_accountability.geopolitical_score",
+                "unit":             "/ 10",
+                "higher_is_better": True,
+                "description":      "Neutrality on geopolitical issues (Israel-Palestine, Ukraine, etc.) and independence from authoritarian influence",
+                "source":           "Public positions & policy analysis 2024",
+                "rationale":        "Higher scores: maintain political neutrality, no country-specific biases in content, no authoritarian government backing. Lower: take sides, favor certain nations, state-owned/influenced."
+            },
+            {
+                "key":              "human_values_score",
+                "label":            "Human Values & Social Impact",
+                "path":             "values_accountability.human_values_score",
+                "unit":             "/ 10",
+                "higher_is_better": True,
+                "description":      "Commitment to human dignity, worker rights, environmental responsibility, and social good",
+                "source":           "Corporate actions & commitments 2024",
+                "rationale":        "Higher scores: fair labor practices, environmental commitments, accessibility for disabled, support for human rights causes. Lower: labor exploitation, environmental damage, exclusionary practices."
             },
         ]
     }
@@ -306,6 +236,22 @@ def run_comparison(company_a: dict, company_b: dict, categories: list) -> dict:
             total_score_b += sc_b
             metric_count  += 1
 
+            # Extract official policy highlights and evidence
+            policy_highlights_a = deep_get(company_a, f"policy_highlights.{item['key'].replace('_score', '')}") or ""
+            policy_highlights_b = deep_get(company_b, f"policy_highlights.{item['key'].replace('_score', '')}") or ""
+            
+            # Extract methodology explanation for this specific metric
+            methodology_key = f"{item['key']}_explanation"
+            methodology_a = deep_get(company_a, f"{cat_key}_methodology.{methodology_key}") or ""
+            methodology_b = deep_get(company_b, f"{cat_key}_methodology.{methodology_key}") or ""
+            
+            # Extract policy URL
+            policy_url_a = company_a.get("policy_url", "")
+            policy_url_b = company_b.get("policy_url", "")
+            
+            confidence_a = deep_get(company_a, f"{cat_key}.{item['key']}_confidence_interval") or None
+            confidence_b = deep_get(company_b, f"{cat_key}.{item['key']}_confidence_interval") or None
+
             row_list.append({
                 "key":              item["key"],
                 "label":            item["label"],
@@ -320,12 +266,23 @@ def run_comparison(company_a: dict, company_b: dict, categories: list) -> dict:
                 "score_a":          sc_a,
                 "score_b":          sc_b,
                 "winner":           winner,
+                "rationale":        item.get("rationale", ""),
+                "methodology_a":    methodology_a,
+                "methodology_b":    methodology_b,
+                "policy_highlights_a": policy_highlights_a,
+                "policy_highlights_b": policy_highlights_b,
+                "policy_url_a":     policy_url_a,
+                "policy_url_b":     policy_url_b,
+                "confidence_a":     confidence_a,
+                "confidence_b":     confidence_b,
             })
 
         results[cat_key] = {
             "label":   cat["label"],
             "icon":    cat["icon"],
             "metrics": row_list,
+            "methodology_a": deep_get(company_a, f"{cat_key}_methodology") or {},
+            "methodology_b": deep_get(company_b, f"{cat_key}_methodology") or {},
         }
 
     if metric_count == 0:
@@ -564,12 +521,12 @@ def api_compare():
     Main comparison endpoint.
 
     Query parameters:
-      company_a  – id of Company A   (default: apple)
-      company_b  – id of Company B   (default: samsung)
-      category   – one of: all | financial | performance | internal | customer | innovation
+      company_a  – id of Company A   (default: perplexity)
+      company_b  – id of Company B   (default: openai)
+      category   – one of: ai_policy
     """
-    id_a     = request.args.get("company_a", "apple").strip().lower()
-    id_b     = request.args.get("company_b", "samsung").strip().lower()
+    id_a     = request.args.get("company_a", "perplexity").strip().lower()
+    id_b     = request.args.get("company_b", "openai").strip().lower()
     cat_arg  = request.args.get("category", "all").strip().lower()
 
     company_a = COMPANIES.get(id_a)
@@ -599,8 +556,8 @@ def api_compare():
     insights = generate_insights(company_a, company_b, comparison)
 
     return jsonify({
-        "company_a":     {"id": id_a, "name": company_a["name"], "ticker": company_a["ticker"], "color": company_a["logo_color"]},
-        "company_b":     {"id": id_b, "name": company_b["name"], "ticker": company_b["ticker"], "color": company_b["logo_color"]},
+        "company_a":     {"id": id_a, "name": company_a["name"], "color": company_a.get("logo_color", "#666")},
+        "company_b":     {"id": id_b, "name": company_b["name"], "color": company_b.get("logo_color", "#666")},
         "category_filter": cat_arg,
         "comparison":    comparison["categories"],
         "total_score_a": comparison["total_score_a"],
@@ -609,6 +566,18 @@ def api_compare():
         "metric_count":  comparison["metric_count"],
         "insights":      insights,
         "metadata":      META,
+        "companies_data": [
+            {
+                "name": company_a["name"],
+                "concerning_policies": company_a.get("concerning_policies", []),
+                "policy_sources": company_a.get("policy_sources", [])
+            },
+            {
+                "name": company_b["name"],
+                "concerning_policies": company_b.get("concerning_policies", []),
+                "policy_sources": company_b.get("policy_sources", [])
+            }
+        ]
     })
 
 
@@ -641,7 +610,7 @@ if __name__ == "__main__":
     print("\n" + "="*55)
     print("  BenchmarkIQ — Company Benchmark Comparison System")
     print("="*55)
-    print(f"  Data: FY 2023 | Companies: Apple vs Samsung")
-    print(f"  Open → http://localhost:5000")
+    print(f"  Data: 2026 | Companies: Perplexity, OpenAI, Google, Anthropic, Meta, DeepSeek")
+    print(f"  Open → http://localhost:8000")
     print("="*55 + "\n")
-    app.run(debug=True, port=5000)
+    app.run(debug=True, host="0.0.0.0", port=8000)

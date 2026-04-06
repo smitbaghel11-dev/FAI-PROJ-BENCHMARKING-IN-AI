@@ -1,16 +1,36 @@
-# BenchmarkIQ — Company Benchmark Comparison System
-### Apple Inc. vs Samsung Electronics · Technology Industry · FY 2023
+# CEPA — Comparative Ethical Policy Auditor
+### AI Policy & Ethics Benchmarking System · 2026
+
+---
+
+## 🎯 What's New: Evidence & Justification System
+
+**Every metric score now has a clickable "📄 View Evidence" button** that shows:
+
+- **Score with confidence range** (e.g., `8.3/10 ± 1.0`)
+- **Why we gave this score** (specific reasoning)
+- **What data we analyzed** (methodology basis)
+- **How certain we are** (confidence intervals)
+- **Side-by-side comparison** (both companies' reasoning visible)
+
+**Goal:** If an employee from one of these companies reads our benchmark, they understand our reasoning and internally agree it's fair.
+
+→ See [`SOLUTION_GUIDE.md`](SOLUTION_GUIDE.md) for complete details.
 
 ---
 
 ## Overview
 
-BenchmarkIQ is a full-stack Python web application that lets you compare two companies
-across **13 benchmark metrics in 5 categories** using real, verified FY 2023 data.
+CEPA is a full-stack Python web application that benchmarks **6 AI companies** across 
+**4 AI policy metrics + 3 values/accountability metrics** using real policy analysis.
+
+**Focus:** Privacy Protection, Transparency, Liability & Safety, User Rights, Government Collaboration, Geopolitical Neutrality, Human Values
+
+**Companies:** Perplexity AI, OpenAI, Anthropic, Google, Meta Platforms, DeepSeek
 
 **System flow:**
 ```
-User Input → Flask API → Comparison Engine → Score Normalisation → Insights Engine → Dashboard
+User Input → Flask API → Comparison Engine → Score Normalisation → Insights Engine + Evidence Cards → Dashboard
 ```
 
 ---
@@ -18,16 +38,22 @@ User Input → Flask API → Comparison Engine → Score Normalisation → Insig
 ## Project Structure
 
 ```
-benchmarkiq/
+cepa/
 ├── app.py                      ← Flask backend (API + comparison engine + insights)
+│                                 ✨ NEW: Extracts methodology data
 ├── requirements.txt
 ├── templates/
 │   └── index.html              ← Single-page dashboard
 ├── static/
-│   ├── css/style.css           ← Stylesheet (dark editorial theme)
-│   └── js/main.js              ← Chart.js rendering + API calls
+│   ├── css/style.css           ← Stylesheet with evidence card styling
+│   │                              ✨ NEW: 120 lines for evidence cards
+│   └── js/main.js              ← Chart.js + evidence card rendering
+│                                  ✨ NEW: Show/hide evidence functions
 └── data/
-    ├── companies.json          ← Primary data store (13 metrics × 2 companies)
+    ├── companies.json          ← 6 AI companies with:
+    │                              ✨ NEW: Methodology explanations
+    │                              ✨ NEW: Confidence intervals
+    │                              ✨ NEW: Per-metric reasoning
     ├── benchmark_dataset.csv   ← Downloadable flat dataset
     └── schema.sql              ← MySQL schema + seed data
 ```

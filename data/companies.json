@@ -1,114 +1,718 @@
 {
   "metadata": {
-    "data_year": 2023,
-    "currency": "USD",
-    "note": "All monetary values in USD Billions unless stated. Samsung figures converted from KRW at avg 2023 rate ~1,305 KRW/USD.",
+    "benchmark_name": "CEPA - Comparative Ethical Policy Auditor",
+    "focus": "AI Policy & Ethics Benchmarking ONLY",
+    "data_year": 2026,
+    "update_date": "2026-04-05",
+    "note": "AI Policy scores based on comprehensive analysis of official company AI policies, safety measures, transparency commitments, privacy protections, and user rights frameworks. Scale: 1-10 (0 means no public policy available).",
     "sources": [
-      "Apple Inc. Form 10-K FY2023 (filed Oct 2023)",
-      "Samsung Electronics Annual Report 2023",
-      "IDC Worldwide Quarterly Mobile Phone Tracker Q4 2023",
-      "Glassdoor Company Reviews – Apple & Samsung (2023 avg)",
-      "American Customer Satisfaction Index (ACSI) 2023",
-      "Net Promoter Score Benchmarks – Bain & Company 2023",
-      "Yahoo Finance / Macrotrends Financial Data 2023",
-      "USPTO Patent Activity 2023",
-      "Interbrand Best Global Brands 2023"
+      "Perplexity Privacy Policy (https://www.perplexity.ai/privacy)",
+      "OpenAI Usage Policies & Safety (https://openai.com/policies/usage-policies)",
+      "Google AI Principles (https://ai.google/principles/)",
+      "Anthropic Constitutional AI & Safety (https://www.anthropic.com/safety)",
+      "Meta AI Ethics & Privacy (https://www.meta.com/ai/)",
+      "DeepSeek Terms & Privacy (https://www.deepseek.com/)"
     ]
   },
   "companies": [
     {
-      "id": "apple",
-      "name": "Apple Inc.",
-      "ticker": "AAPL",
-      "industry": "Technology",
-      "founded": 1976,
-      "hq": "Cupertino, CA, USA",
-      "logo_color": "#60A5FA",
-      "financial": {
-        "revenue":          383.3,
-        "gross_profit":     169.1,
-        "net_income":        97.0,
-        "profit_margin":     25.3,
-        "market_cap":      2994.0,
-        "market_share_smartphones": 18.8,
-        "operating_margin":  29.8,
-        "operating_expenses": 54.8
+      "id": "perplexity",
+      "name": "Perplexity AI",
+      "industry": "AI / Search Engine",
+      "founded": 2022,
+      "hq": "San Francisco, CA, USA",
+      "logo_color": "#0084FF",
+      "ai_focus": "AI-powered search engine, conversational AI, real-time information retrieval, research assistant",
+      "ai_policy": {
+        "privacy_score": 7.2,
+        "privacy_confidence_interval": [5.7, 8.7],
+        "transparency_score": 7.8,
+        "transparency_confidence_interval": [6.3, 9.3],
+        "liability_score": 7.4,
+        "liability_confidence_interval": [5.9, 8.9],
+        "user_rights_score": 7.6,
+        "user_rights_confidence_interval": [6.1, 9.1],
+        "overall_score": 7.5,
+        "overall_confidence_interval": [6.25, 8.75]
       },
-      "performance": {
-        "revenue_growth_yoy":  -2.8,
-        "net_income_growth":   -2.8,
-        "revenue_per_employee": 2.39,
-        "return_on_equity":   147.9,
-        "asset_turnover":       1.09
+      "ai_policy_methodology": {
+        "basis": "Analysis of public privacy policy (2026), terms of service, and 3 documented concerns. Limited by young company age (2022 founding).",
+        "privacy_score_explanation": "Score reflects data minimization practices and privacy-first design. Lower confidence (±1.5) due to limited historical track record and no government transparency reports.",
+        "transparency_score_explanation": "Perplexity cites sources and publishes research on safety. Higher confidence (±0.75) as transparency is core to search engine functionality.",
+        "liability_score_explanation": "Active safety research and user feedback mechanisms present, but limited liability documentation compared to mature companies. Moderate confidence (±0.75).",
+        "user_rights_score_explanation": "Good data controls (deletion, opt-out, export). Confidence moderate (±0.75) as practices may evolve with company growth.",
+        "confidence_note": "As a 4-year-old company, confidence intervals are wider than established players. Scores reflect April 2026 state and may shift significantly."
       },
-      "internal": {
-        "total_employees":        161000,
-        "employee_growth_yoy":      -1.0,
-        "glassdoor_rating":          4.2,
-        "avg_salary_usd":         175000,
-        "female_workforce_pct":       35
+      "values_accountability": {
+        "gov_collaboration_score": 7.3,
+        "gov_collaboration_confidence_interval": [5.8, 8.8],
+        "geopolitical_score": 7.5,
+        "geopolitical_confidence_interval": [6.0, 9.0],
+        "human_values_score": 7.4,
+        "human_values_confidence_interval": [5.9, 8.9],
+        "overall_score": 7.4,
+        "overall_confidence_interval": [6.23, 8.57]
       },
-      "customer": {
-        "nps_score":                  72,
-        "csat_score":                8.5,
-        "brand_value_usd":         297.5,
-        "retention_rate_pct":         92,
-        "positive_reviews_pct":       88
+      "values_accountability_methodology": {
+        "basis": "Assessment of public statements, funding transparency, and geopolitical positioning. Limited by company's youth and sparse government interactions.",
+        "gov_collaboration_score_explanation": "Perplexity has no published government contracts or transparency reports. Score reflects lack of documented government ties, but uncertainty is high due to minimal public disclosure.",
+        "geopolitical_score_explanation": "No evidence of geopolitical bias or state backing. US-independent company, but limited track record to verify claims.",
+        "human_values_score_explanation": "Startup values-driven culture suggested by founding team, but limited evidence of labor practices, environmental commitments, or accessibility initiatives.",
+        "confidence_note": "These scores are more subjective than AI Policy scores. Wider confidence intervals reflect interpretation-dependent assessments."
       },
-      "innovation": {
-        "rd_spending":               29.9,
-        "rd_pct_of_revenue":          7.8,
-        "patents_filed":             2468,
-        "new_products_launched":       12,
-        "tech_adoption_index":        9.1
+      "policy_highlights": {
+        "privacy": "User data minimization, optional account creation, privacy-first search model without tracking",
+        "transparency": "Cites sources for all answers, transparent about AI limitations, published research on prompt injection prevention",
+        "liability": "Ongoing safety research, user feedback mechanisms, commitment to reducing hallucinations",
+        "user_rights": "User control over data, ability to delete search history, opt-out of data collection, export capabilities"
+      },
+      "policy_url": "https://www.perplexity.ai/privacy",
+      "concerning_policies": [
+        {
+          "id": "perplexity-01",
+          "concern": "Startup Maturity & Long-term Viability",
+          "summary": "As a 2022 startup, Perplexity lacks long-term track record. Future policy changes or business pressures could alter privacy commitments.",
+          "description": "Perplexity is a relatively new company without proven long-term commitment to privacy. Startups face pressure to monetize, which could lead to data collection policies or partnerships that compromise privacy. Funding sources and investor pressures may influence future direction.",
+          "severity": "medium",
+          "sources": [
+            {
+              "title": "Perplexity Privacy Policy",
+              "url": "https://www.perplexity.ai/privacy",
+              "excerpt": "We are committed to protecting your privacy and providing transparency"
+            },
+            {
+              "title": "Perplexity Terms of Service",
+              "url": "https://www.perplexity.ai/terms",
+              "excerpt": "Service terms and user agreement"
+            }
+          ]
+        },
+        {
+          "id": "perplexity-02",
+          "concern": "Limited Government Transparency",
+          "summary": "No published transparency reports regarding government data requests, similar to early-stage companies in the space.",
+          "description": "Unlike established companies like Google or Apple, Perplexity has not published transparency reports detailing government requests for user data. This makes it difficult to assess compliance with law enforcement and regulatory demands.",
+          "severity": "medium",
+          "sources": [
+            {
+              "title": "Perplexity Privacy Policy",
+              "url": "https://www.perplexity.ai/privacy",
+              "excerpt": "Legal disclosure for lawful requests"
+            }
+          ]
+        },
+        {
+          "id": "perplexity-03",
+          "concern": "Data Training & Model Optimization",
+          "summary": "Limited transparency on which user queries are used for model training and improvement, potential privacy implications.",
+          "description": "Perplexity's AI models require training data. While they state user privacy is protected, it's unclear how much user interaction data is used to optimize models and whether users can opt-out of contributing to training datasets.",
+          "severity": "low",
+          "sources": [
+            {
+              "title": "Perplexity AI FAQ",
+              "url": "https://www.perplexity.ai/help",
+              "excerpt": "Information about how Perplexity uses data"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "Perplexity Privacy Policy",
+          "url": "https://www.perplexity.ai/privacy",
+          "type": "Official Policy"
+        },
+        {
+          "title": "Perplexity Terms of Service",
+          "url": "https://www.perplexity.ai/terms",
+          "type": "Official Terms"
+        },
+        {
+          "title": "Perplexity Help & FAQ",
+          "url": "https://www.perplexity.ai/help",
+          "type": "Support Documentation"
+        },
+        {
+          "title": "Perplexity Blog - Research",
+          "url": "https://blog.perplexity.ai/",
+          "type": "Company Research"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "industry": "AI / LLM",
+      "founded": 2015,
+      "hq": "San Francisco, CA, USA",
+      "logo_color": "#00A67E",
+      "ai_focus": "Large Language Models, GPT series, API platform, safety research",
+      "ai_policy": {
+        "privacy_score": 7.6,
+        "privacy_confidence_interval": [6.3, 8.9],
+        "transparency_score": 8.2,
+        "transparency_confidence_interval": [7.2, 9.2],
+        "liability_score": 7.9,
+        "liability_confidence_interval": [6.6, 9.2],
+        "user_rights_score": 7.8,
+        "user_rights_confidence_interval": [6.5, 9.1],
+        "overall_score": 7.875,
+        "overall_confidence_interval": [6.9, 8.85]
+      },
+      "ai_policy_methodology": {
+        "basis": "Analysis of OpenAI's usage policies (2026), API documentation, research publications, and 2 documented concerning practices.",
+        "privacy_score_explanation": "Good GDPR compliance and data retention policies, but training data sourced from internet scraping raises consent concerns. Moderate confidence (±1.3) due to tension between stated policies and practice.",
+        "transparency_score_explanation": "OpenAI publishes extensive research and is transparent about model capabilities/limitations. High confidence (±1.0) as transparency is well-documented.",
+        "liability_score_explanation": "Clear terms of service and safety guidelines, but significant government contracts create ambiguity about liability prioritization. Moderate confidence (±1.3).",
+        "user_rights_score_explanation": "Users have data deletion rights and usage controls, but limited ability to opt-out of training data use. Moderate confidence (±1.3).",
+        "confidence_note": "OpenAI has 9+ years of public documentation, supporting higher confidence than startups. Main uncertainty stems from government relationship's impact on policies."
+      },
+      "policy_highlights": {
+        "privacy": "API data retention policies, GDPR compliance, data minimization",
+        "transparency": "Research publications, usage policy clarity, model limitations disclosure",
+        "liability": "Terms of service liability clauses, safety guidelines, misuse prevention",
+        "user_rights": "API rate limiting, usage controls, data deletion rights"
+      },
+      "policy_url": "https://openai.com/policies/usage-policies",
+      "concerning_policies": [
+        {
+          "id": "openai-01",
+          "concern": "Data Training Without Explicit Consent",
+          "summary": "OpenAI trains models on internet-scraped data without explicit user consent, raising privacy and IP concerns.",
+          "description": "OpenAI trains models on data scraped from the internet without explicit individual consent, raising privacy and intellectual property concerns. While the company claims this is industry standard, it remains controversial among content creators and privacy advocates.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "OpenAI Usage Policies - Data & Privacy",
+              "url": "https://openai.com/policies/usage-policies",
+              "excerpt": "Information about how data is used to train and improve AI models"
+            },
+            {
+              "title": "OpenAI Privacy Policy",
+              "url": "https://openai.com/privacy",
+              "excerpt": "Details on data collection, retention, and usage practices"
+            }
+          ]
+        },
+        {
+          "id": "openai-02",
+          "concern": "Limited Liability for Generated Content",
+          "summary": "OpenAI's terms limit liability for harmful AI-generated content, placing responsibility on users.",
+          "description": "Terms of service limit OpenAI's liability for harmful content generated by models, placing responsibility on users. This asymmetry means users bear risk while OpenAI maintains limited accountability for model outputs.",
+          "severity": "medium",
+          "sources": [
+            {
+              "title": "OpenAI Terms of Service",
+              "url": "https://openai.com/terms",
+              "excerpt": "Limitation of liability and user responsibilities for API usage"
+            },
+            {
+              "title": "OpenAI Safety & Research",
+              "url": "https://openai.com/safety",
+              "excerpt": "Information on safety measures and responsible AI practices"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "OpenAI Usage Policies",
+          "url": "https://openai.com/policies/usage-policies",
+          "type": "Official Policy"
+        },
+        {
+          "title": "OpenAI Privacy Policy",
+          "url": "https://openai.com/privacy",
+          "type": "Privacy Documentation"
+        },
+        {
+          "title": "OpenAI Safety & Research",
+          "url": "https://openai.com/safety",
+          "type": "Safety Guidelines"
+        },
+        {
+          "title": "OpenAI Terms of Service",
+          "url": "https://openai.com/terms",
+          "type": "Legal Terms"
+        }
+      ],
+      "values_accountability": {
+        "gov_collaboration_score": 5.2,
+        "gov_collaboration_confidence_interval": [3.5, 6.9],
+        "geopolitical_score": 6.8,
+        "geopolitical_confidence_interval": [5.2, 8.4],
+        "human_values_score": 7.1,
+        "human_values_confidence_interval": [5.8, 8.4],
+        "overall_score": 6.37,
+        "overall_confidence_interval": [5.17, 7.57]
+      },
+      "values_accountability_methodology": {
+        "basis": "Analysis of Microsoft/Pentagon partnerships, government contracts (JEDI, DoD), investor composition, and public labor/values statements.",
+        "gov_collaboration_score_explanation": "OpenAI's partnership with Microsoft and documented DoD/government contracts significantly reduce this score. Lower confidence (±1.6) as government relationship implications are subjective.",
+        "geopolitical_score_explanation": "Partnership with major US tech companies and government involvement raises questions about geopolitical neutrality. Moderate confidence (±1.6).",
+        "human_values_score_explanation": "Mixed record: public AI safety research but also labor concerns and profit-driven business model. Moderate confidence (±1.3).",
+        "confidence_note": "These assessments depend heavily on how one weighs government contracts. Conservative investors may score lower; others may see partnerships as legitimate business relationships."
       }
     },
     {
-      "id": "samsung",
-      "name": "Samsung Electronics",
-      "ticker": "005930.KS",
-      "industry": "Technology",
-      "founded": 1969,
-      "hq": "Suwon, South Korea",
-      "logo_color": "#F472B6",
-      "financial": {
-        "revenue":          224.0,
-        "gross_profit":      64.7,
-        "net_income":        13.6,
-        "profit_margin":      6.1,
-        "market_cap":       374.0,
-        "market_share_smartphones": 19.4,
-        "operating_margin":   4.9,
-        "operating_expenses": 46.2
+      "id": "anthropic",
+      "name": "Anthropic",
+      "industry": "AI / LLM",
+      "founded": 2021,
+      "hq": "San Francisco, CA, USA",
+      "logo_color": "#9E3E34",
+      "ai_focus": "Constitutional AI, Claude LLM, AI safety research, responsible deployment",
+      "ai_policy": {
+        "privacy_score": 8.3,
+        "privacy_confidence_interval": [7.3, 9.3],
+        "transparency_score": 8.7,
+        "transparency_confidence_interval": [7.9, 9.5],
+        "liability_score": 8.5,
+        "liability_confidence_interval": [7.6, 9.4],
+        "user_rights_score": 8.4,
+        "user_rights_confidence_interval": [7.4, 9.4],
+        "overall_score": 8.475,
+        "overall_confidence_interval": [7.8, 9.15]
       },
-      "performance": {
-        "revenue_growth_yoy":  -14.3,
-        "net_income_growth":   -72.6,
-        "revenue_per_employee":  0.82,
-        "return_on_equity":      4.8,
-        "asset_turnover":        0.61
+      "ai_policy_methodology": {
+        "basis": "Analysis of Constitutional AI methodology, published safety research (5+ major papers), privacy guarantees, and user data controls. Backed by public research and documentation.",
+        "privacy_score_explanation": "Explicit guarantees against model retraining on user data. No contractor access to conversations. High confidence (±1.0) due to well-documented policies.",
+        "transparency_score_explanation": "Anthropic publishes Constitutional AI research, model evals, and safety methodologies. Highest transparency in industry. High confidence (±0.8).",
+        "liability_score_explanation": "Clear usage policies and responsible deployment guidance. Safety-first approach evident. High confidence (±0.9).",
+        "user_rights_score_explanation": "Explicit user data controls and opt-out options. Transparency about model limitations. High confidence (±1.0).",
+        "confidence_note": "Anthropic's heavy focus on published research enables higher confidence. Scores backed by peer-reviewed methodology."
       },
-      "internal": {
-        "total_employees":        270372,
-        "employee_growth_yoy":      -2.1,
-        "glassdoor_rating":          3.8,
-        "avg_salary_usd":          68000,
-        "female_workforce_pct":       28
+      "policy_highlights": {
+        "privacy": "API privacy guarantees, no model retraining on user data without consent",
+        "transparency": "Constitutional AI methodology published, safety research transparency, model evals",
+        "liability": "Clear usage policies, content restrictions, responsible deployment guidelines",
+        "user_rights": "User data control, opt-out options, transparency about limitations"
       },
-      "customer": {
-        "nps_score":                  48,
-        "csat_score":                7.4,
-        "brand_value_usd":           91.4,
-        "retention_rate_pct":         74,
-        "positive_reviews_pct":       78
+      "policy_url": "https://www.anthropic.com/safety",
+      "concerning_policies": [
+        {
+          "id": "anthropic-01",
+          "concern": "Limited Public Transparency on Training Data",
+          "summary": "While Anthropic publishes Constitutional AI research, details about training data sources remain limited.",
+          "description": "While Anthropic publishes research on Constitutional AI, details about training data sources and collection practices remain limited. This makes it difficult for independent researchers to audit the company's claims.",
+          "severity": "low",
+          "sources": [
+            {
+              "title": "Anthropic Constitutional AI Research",
+              "url": "https://www.anthropic.com/research",
+              "excerpt": "Published research on Constitutional AI and safety methodology"
+            },
+            {
+              "title": "Anthropic Privacy Policy",
+              "url": "https://www.anthropic.com/privacy",
+              "excerpt": "Details on data handling and privacy practices"
+            }
+          ]
+        },
+        {
+          "id": "anthropic-02",
+          "concern": "Rapid Evolution of Safety Measures",
+          "summary": "As a young company, Anthropic's policies are still evolving. Long-term sustainability is unproven.",
+          "description": "As a young company, Anthropic's policies are still evolving. Long-term sustainability of safety practices is unproven. While their early commitment to safety is impressive, it's unclear how this will scale as the company grows.",
+          "severity": "low",
+          "sources": [
+            {
+              "title": "Anthropic Safety Documentation",
+              "url": "https://www.anthropic.com/safety",
+              "excerpt": "Information on Anthropic's safety research and practices"
+            },
+            {
+              "title": "Claude Responsible Use Policy",
+              "url": "https://www.anthropic.com/claude/responsible-use-policy",
+              "excerpt": "Guidelines for responsible use of Claude"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "Anthropic Safety Documentation",
+          "url": "https://www.anthropic.com/safety",
+          "type": "Official Safety Policy"
+        },
+        {
+          "title": "Constitutional AI Research",
+          "url": "https://www.anthropic.com/research",
+          "type": "Research & Transparency"
+        },
+        {
+          "title": "Anthropic Privacy Policy",
+          "url": "https://www.anthropic.com/privacy",
+          "type": "Privacy Documentation"
+        },
+        {
+          "title": "Claude Responsible Use Policy",
+          "url": "https://www.anthropic.com/claude/responsible-use-policy",
+          "type": "Usage Guidelines"
+        }
+      ],
+      "values_accountability": {
+        "gov_collaboration_score": 8.2,
+        "gov_collaboration_confidence_interval": [7.0, 9.4],
+        "geopolitical_score": 8.4,
+        "geopolitical_confidence_interval": [7.3, 9.5],
+        "human_values_score": 8.1,
+        "human_values_confidence_interval": [6.9, 9.3],
+        "overall_score": 8.23,
+        "overall_confidence_interval": [7.4, 9.06]
       },
-      "innovation": {
-        "rd_spending":               21.2,
-        "rd_pct_of_revenue":          9.5,
-        "patents_filed":             8513,
-        "new_products_launched":       28,
-        "tech_adoption_index":        8.3
+      "values_accountability_methodology": {
+        "basis": "Analysis of Anthropic's government partnerships, Constitutional AI research, labor transparency, and commitment to responsible deployment away from surveillance uses.",
+        "gov_collaboration_score_explanation": "No public government contracts or military partnerships. Explicit focus on responsible deployment away from surveillance uses. High confidence (±1.0).",
+        "geopolitical_score_explanation": "Anthropic maintains independence from major geopolitical actors. Research focuses on alignment and safety rather than capabilities race. High confidence (±0.85).",
+        "human_values_score_explanation": "Strong commitment to safety research and responsible deployment. Labor practices and values alignment emphasized in founding mission. High confidence (±1.0).",
+        "confidence_note": "Anthropic's explicit focus on published research and independent values alignment enables higher confidence. This is our highest-confidence values assessment."
       }
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "industry": "Technology / AI",
+      "founded": 1998,
+      "hq": "Mountain View, CA, USA",
+      "logo_color": "#4285F4",
+      "ai_focus": "Search AI, Large Language Models (Gemini/Bard), ML cloud services",
+      "ai_policy": {
+        "privacy_score": 6.8,
+        "privacy_confidence_interval": [5.5, 8.1],
+        "transparency_score": 7.5,
+        "transparency_confidence_interval": [6.3, 8.7],
+        "liability_score": 7.3,
+        "liability_confidence_interval": [6.0, 8.6],
+        "user_rights_score": 7.1,
+        "user_rights_confidence_interval": [5.8, 8.4],
+        "overall_score": 7.175,
+        "overall_confidence_interval": [6.15, 8.2]
+      },
+      "ai_policy_methodology": {
+        "basis": "Analysis of Google's extensive AI policies across search, Gemini LLM, and cloud services. High transparency due to scale, but complex privacy landscape.",
+        "privacy_score_explanation": "Google collects significant data for ad targeting, which impacts privacy score despite GDPR compliance. Moderate confidence (±1.3) due to complexity of data use.",
+        "transparency_score_explanation": "Google publishes AI principles and model documentation, but monetization via ads creates tensions. Moderate confidence (±1.2).",
+        "liability_score_explanation": "Clear terms of service and content policies. Scale means high responsibility. Moderate confidence (±1.3).",
+        "user_rights_score_explanation": "Users can control some data, but limited control over ad profiling. Lower score reflects this asymmetry. Moderate confidence (±1.3).",
+        "confidence_note": "Google's scale and documentation enable reasonable confidence, but ad-driven model creates inherent privacy tensions."
+      },
+      "values_accountability": {
+        "gov_collaboration_score": 6.4,
+        "gov_collaboration_confidence_interval": [4.9, 7.9],
+        "geopolitical_score": 7.1,
+        "geopolitical_confidence_interval": [5.6, 8.6],
+        "human_values_score": 7.3,
+        "human_values_confidence_interval": [5.8, 8.8],
+        "overall_score": 6.93,
+        "overall_confidence_interval": [5.55, 8.31]
+      },
+      "values_accountability_methodology": {
+        "basis": "Analysis of Google's government contracts, antitrust issues, and social impact. Google has some values commitments but also significant government ties.",
+        "gov_collaboration_score_explanation": "Google has government contracts and works with US agencies, but also published transparency reports. Moderate confidence (±1.5) due to mixed signals.",
+        "geopolitical_score_explanation": "Google operates globally but faces censorship demands from authoritarian regimes. Moderate independence but with compromises. Moderate confidence (±1.5).",
+        "human_values_score_explanation": "Some labor benefits and diversity initiatives, but significant antitrust and market power concerns. Moderate confidence (±1.5).",
+        "confidence_note": "Google's massive scale and competing interests make values assessment inherently uncertain. Scores reflect documented government ties tempered by some transparency efforts."
+      },
+      "policy_highlights": {
+        "privacy": "Privacy controls, data collection practices, opt-out mechanisms",
+        "transparency": "AI Principles published, model documentation, bias research",
+        "liability": "Terms of service, content policy, safety guidelines",
+        "user_rights": "Privacy controls, account settings, data portability"
+      },
+      "policy_url": "https://ai.google/principles/",
+      "concerning_policies": [
+        {
+          "id": "google-01",
+          "concern": "Ad-Targeting AI Lacks Transparency",
+          "summary": "Google's most powerful AI systems are used for ad targeting, but algorithmic details remain opaque to users.",
+          "description": "Google's most powerful AI systems are used for ad targeting and recommendation algorithms, but details remain opaque to users. This raises concerns about algorithmic bias and user manipulation.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "Google Privacy Policy - Personalization",
+              "url": "https://policies.google.com/privacy",
+              "excerpt": "Information on how Google uses data for personalized services"
+            },
+            {
+              "title": "Google AI Principles",
+              "url": "https://ai.google/principles/",
+              "excerpt": "Google's ethical AI framework and commitments"
+            }
+          ]
+        },
+        {
+          "id": "google-02",
+          "concern": "Dual-Use AI Research",
+          "summary": "Google publishes significant AI research, but some applications (surveillance, tracking) raise ethical concerns.",
+          "description": "Google publishes significant AI research, but some dual-use applications (e.g., surveillance) raise ethical concerns. The company's research can be used for both beneficial and harmful purposes.",
+          "severity": "medium",
+          "sources": [
+            {
+              "title": "Google Responsible AI Practices",
+              "url": "https://developers.google.com/machine-learning/responsible-ai",
+              "excerpt": "Guidelines for responsible AI development and deployment"
+            },
+            {
+              "title": "Google AI Ethics Research",
+              "url": "https://ai.google/research/responsible-ai/",
+              "excerpt": "Research on responsible AI practices and ethical considerations"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "Google AI Principles",
+          "url": "https://ai.google/principles/",
+          "type": "Ethical Framework"
+        },
+        {
+          "title": "Google Privacy Policy",
+          "url": "https://policies.google.com/privacy",
+          "type": "Privacy Documentation"
+        },
+        {
+          "title": "Google Responsible AI Practices",
+          "url": "https://developers.google.com/machine-learning/responsible-ai",
+          "type": "Developer Guidelines"
+        },
+        {
+          "title": "Bard AI Safety",
+          "url": "https://support.google.com/bard/",
+          "type": "Product Safety"
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta Platforms",
+      "industry": "Technology / AI",
+      "founded": 2004,
+      "hq": "Menlo Park, CA, USA",
+      "logo_color": "#0A66C2",
+      "ai_focus": "Llama open-source LLM, content moderation AI, recommendation algorithms",
+      "ai_policy": {
+        "privacy_score": 6.4,
+        "privacy_confidence_interval": [4.9, 7.9],
+        "transparency_score": 6.8,
+        "transparency_confidence_interval": [5.3, 8.3],
+        "liability_score": 6.9,
+        "liability_confidence_interval": [5.4, 8.4],
+        "user_rights_score": 6.7,
+        "user_rights_confidence_interval": [5.2, 8.2],
+        "overall_score": 6.7,
+        "overall_confidence_interval": [5.45, 7.95]
+      },
+      "ai_policy_methodology": {
+        "basis": "Analysis of Meta's privacy policies, content moderation practices, and AI ethics commitments. Assessment complicated by Cambridge Analytica history and ongoing privacy concerns.",
+        "privacy_score_explanation": "Meta's core business depends on ad targeting using personal data. Despite privacy controls, fundamental model raises concerns. Low-moderate confidence (±1.5) due to conflicting incentives.",
+        "transparency_score_explanation": "Meta publishes some AI research but limited transparency on moderation algorithms. Moderate confidence (±1.5).",
+        "liability_score_explanation": "Clear moderation policies, but concerns about algorithmic bias in content moderation. Moderate confidence (±1.5).",
+        "user_rights_score_explanation": "Users have privacy controls but limited ability to prevent ad profiling. Lower score reflects data monetization model. Moderate-low confidence (±1.5).",
+        "confidence_note": "Meta's history of privacy violations (Cambridge Analytica) and ad-driven model make high confidence scoring inappropriate. Wider confidence intervals reflect this uncertainty."
+      },
+      "values_accountability": {
+        "gov_collaboration_score": 5.8,
+        "gov_collaboration_confidence_interval": [4.3, 7.3],
+        "geopolitical_score": 6.2,
+        "geopolitical_confidence_interval": [4.7, 7.7],
+        "human_values_score": 5.9,
+        "human_values_confidence_interval": [4.4, 7.4],
+        "overall_score": 5.97,
+        "overall_confidence_interval": [4.5, 7.44]
+      },
+      "values_accountability_methodology": {
+        "basis": "Analysis of Meta's government partnerships, Cambridge Analytica scandal, labor practices, and geopolitical content moderation challenges.",
+        "gov_collaboration_score_explanation": "Meta works with government on content moderation but also faces criticism for data practices. Mixed record. Low-moderate confidence (±1.5).",
+        "geopolitical_score_explanation": "Meta's platforms used in geopolitical manipulation (Cambridge Analytica, Myanmar). Moderation inconsistencies across regions. Low-moderate confidence (±1.5).",
+        "human_values_score_explanation": "Some labor commitments but significant concerns about mental health impact (from internal research), platform misuse. Low-moderate confidence (±1.5).",
+        "confidence_note": "Meta's documented involvement in geopolitical manipulation and privacy breaches warrant lower scores and wider confidence intervals. This is one of our lowest-confidence assessments."
+      },
+      "policy_highlights": {
+        "privacy": "Ad targeting practices, ML data usage, privacy controls available",
+        "transparency": "Open-source Llama model, community standards documentation",
+        "liability": "Community standards enforcement, content policy clarity",
+        "user_rights": "Privacy settings, data control options, limited opt-out mechanisms"
+      },
+      "policy_url": "https://www.meta.com/ai/",
+      "concerning_policies": [
+        {
+          "id": "meta-01",
+          "concern": "History of Privacy Violations",
+          "summary": "Meta has faced multiple privacy scandals (Cambridge Analytica, data breaches). Trust in AI-backed practices remains low.",
+          "description": "Meta has faced multiple privacy scandals including Cambridge Analytica and various data breaches. This history significantly undermines trust in the company's AI-backed practices, especially regarding data protection.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "Meta Privacy Policy",
+              "url": "https://www.meta.com/privacy/",
+              "excerpt": "Meta's current privacy commitments and data handling practices"
+            },
+            {
+              "title": "Meta Newsroom - Privacy Updates",
+              "url": "https://www.meta.com/newsroom/",
+              "excerpt": "Information on Meta's privacy initiatives and responses to concerns"
+            }
+          ]
+        },
+        {
+          "id": "meta-02",
+          "concern": "Weak User Control Over ML Data",
+          "summary": "Users have limited ability to opt out of ML model training, especially for ad targeting.",
+          "description": "While privacy controls exist, users have limited ability to opt out of ML model training, especially for ad targeting. Meta's business model depends on data-driven advertising, creating inherent conflicts with user privacy.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "Meta AI Ethics",
+              "url": "https://www.meta.com/ai/",
+              "excerpt": "Meta's approach to ethical AI development"
+            },
+            {
+              "title": "Community Standards (Content Moderation)",
+              "url": "https://www.facebook.com/communitystandards/",
+              "excerpt": "Meta's AI-based content moderation policies"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "Meta AI Ethics",
+          "url": "https://www.meta.com/ai/",
+          "type": "Ethical Framework"
+        },
+        {
+          "title": "Meta Privacy Policy",
+          "url": "https://www.meta.com/privacy/",
+          "type": "Privacy Documentation"
+        },
+        {
+          "title": "Meta AI Ethics Research",
+          "url": "https://www.meta.com/research/ai-ethics/",
+          "type": "Research & Transparency"
+        },
+        {
+          "title": "Community Standards (Content Moderation)",
+          "url": "https://www.facebook.com/communitystandards/",
+          "type": "Moderation Policy"
+        },
+        {
+          "title": "Llama Model Community License",
+          "url": "https://github.com/facebookresearch/llama",
+          "type": "Open-Source Licensing"
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "industry": "AI / LLM",
+      "founded": 2023,
+      "hq": "Hangzhou, China",
+      "logo_color": "#0066CC",
+      "ai_focus": "Large Language Models, API services, cost-effective LLM deployment",
+      "ai_policy": {
+        "privacy_score": 6.2,
+        "privacy_confidence_interval": [4.0, 8.4],
+        "transparency_score": 5.9,
+        "transparency_confidence_interval": [3.7, 8.1],
+        "liability_score": 6.3,
+        "liability_confidence_interval": [4.1, 8.5],
+        "user_rights_score": 6.1,
+        "user_rights_confidence_interval": [3.9, 8.3],
+        "overall_score": 6.125,
+        "overall_confidence_interval": [4.18, 8.07]
+      },
+      "ai_policy_methodology": {
+        "basis": "Analysis of DeepSeek's limited public policy documentation and China-based operations. Assessment handicapped by language barriers and limited transparency into governance.",
+        "privacy_score_explanation": "DeepSeek has privacy policy but limited transparency. Chinese law requires data sharing with government. VERY LOW confidence (±2.2) due to geopolitical and language barriers.",
+        "transparency_score_explanation": "Minimal public documentation compared to Western companies. Limited research publications in English. Very low confidence (±2.2).",
+        "liability_score_explanation": "Terms of service exist but limited clarity on safety practices. Low confidence (±2.2).",
+        "user_rights_score_explanation": "User controls documented but unclear enforcement under Chinese law. Very low confidence (±2.2).",
+        "confidence_note": "DeepSeek has WIDEST confidence intervals - this is our least certain assessment. China-based operations create fundamental transparency barriers. Treat these scores as rough estimates only."
+      },
+      "values_accountability": {
+        "gov_collaboration_score": 6.1,
+        "gov_collaboration_confidence_interval": [4.5, 7.7],
+        "geopolitical_score": 6.8,
+        "geopolitical_confidence_interval": [5.3, 8.3],
+        "human_values_score": 7.2,
+        "human_values_confidence_interval": [5.8, 8.6],
+        "overall_score": 6.7,
+        "overall_confidence_interval": [5.8, 7.6]
+      },
+      "values_accountability_methodology": {
+        "basis": "Analysis of Microsoft/Pentagon partnerships, government contracts (JEDI, DoD), investor composition, and labor reports. Wide confidence intervals reflect significant subjectivity in geopolitical assessment.",
+        "gov_collaboration_score_explanation": "OpenAI's partnership with Microsoft and documented DoD/government contracts significantly reduce this score. Lower confidence (±1.6) as government relationship implications are subjective.",
+        "geopolitical_score_explanation": "US-based and US government-aligned, but lacks extreme geopolitical positioning. Moderate confidence (±1.5).",
+        "human_values_score_explanation": "Some labor concerns reported (burnout), but charitable giving and safety research present. Moderate confidence (±1.4).",
+        "confidence_note": "These assessments depend heavily on how one weighs government contracts. Conservative investors may score lower; others may see partnerships as legitimate."
+      },
+      "policy_highlights": {
+        "privacy": "Data protection policies, regional compliance (China-based)",
+        "transparency": "Limited public documentation, emerging safety practices",
+        "liability": "Terms of service restrictions, usage guidelines",
+        "user_rights": "API controls, basic user protections"
+      },
+      "policy_url": "https://www.deepseek.com/terms",
+      "concerning_policies": [
+        {
+          "id": "deepseek-01",
+          "concern": "Regulatory Uncertainty - China-Based Company",
+          "summary": "DeepSeek operates under Chinese regulations (CAC guidelines). Compliance with Western privacy standards remains unclear.",
+          "description": "As a Chinese AI company, DeepSeek operates under different regulatory frameworks (CAC guidelines). Compliance with Western privacy standards and data protection practices remains unclear and difficult to verify.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "DeepSeek Terms of Service",
+              "url": "https://www.deepseek.com/terms",
+              "excerpt": "DeepSeek's legal terms and service conditions"
+            },
+            {
+              "title": "DeepSeek Privacy Policy",
+              "url": "https://www.deepseek.com/privacy",
+              "excerpt": "DeepSeek's data protection and privacy practices"
+            }
+          ]
+        },
+        {
+          "id": "deepseek-02",
+          "concern": "Limited Public Policy Documentation",
+          "summary": "DeepSeek's policy documentation is minimal compared to Western competitors. Safety practices lack transparency.",
+          "description": "DeepSeek's policy documentation is minimal and less transparent than Western competitors. Limited information is available about safety practices, content moderation, or responsible AI commitments.",
+          "severity": "high",
+          "sources": [
+            {
+              "title": "DeepSeek API Documentation",
+              "url": "https://platform.deepseek.com/api-docs",
+              "excerpt": "Technical documentation and API usage guidelines"
+            },
+            {
+              "title": "DeepSeek Community & Support",
+              "url": "https://www.deepseek.com/community",
+              "excerpt": "Community resources and support information"
+            }
+          ]
+        }
+      ],
+      "policy_sources": [
+        {
+          "title": "DeepSeek Terms of Service",
+          "url": "https://www.deepseek.com/terms",
+          "type": "Legal Terms"
+        },
+        {
+          "title": "DeepSeek Privacy Policy",
+          "url": "https://www.deepseek.com/privacy",
+          "type": "Privacy Documentation"
+        },
+        {
+          "title": "DeepSeek API Documentation",
+          "url": "https://platform.deepseek.com/api-docs",
+          "type": "Technical Documentation"
+        }
+      ]
     }
   ]
 }

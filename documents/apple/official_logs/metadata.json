@@ -1,0 +1,34 @@
+{
+  "company": "Apple Inc.",
+  "company_id": "apple",
+  "fetch_date": "2026-04-05T17:46:29.173968",
+  "sources": [
+    {
+      "name": "Apple Newsroom - AI & Privacy",
+      "url": "https://www.apple.com/newsroom/",
+      "description": "Official press releases on AI, privacy, and technology",
+      "status": "success",
+      "html_file": "01_apple_newsroom_-_ai_&_privacy.html",
+      "text_file": "01_apple_newsroom_-_ai_&_privacy.txt",
+      "size_bytes": 159554
+    },
+    {
+      "name": "Apple Privacy Documentation",
+      "url": "https://www.apple.com/privacy/",
+      "description": "Official privacy policies and AI transparency docs",
+      "status": "success",
+      "html_file": "02_apple_privacy_documentation.html",
+      "text_file": "02_apple_privacy_documentation.txt",
+      "size_bytes": 232034
+    },
+    {
+      "name": "Apple Terms of Service",
+      "url": "https://www.apple.com/legal/terms/",
+      "description": "Legal terms covering AI service usage and liability",
+      "status": "success",
+      "html_file": "03_apple_terms_of_service.html",
+      "text_file": "03_apple_terms_of_service.txt",
+      "size_bytes": 120656
+    }
+  ]
+}

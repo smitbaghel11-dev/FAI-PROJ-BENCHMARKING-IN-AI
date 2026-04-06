@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>BenchmarkIQ — Apple vs Samsung 2023</title>
+  <title>CEPA - Comparative Ethical Policy Auditor (AI Policies)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"/>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -43,15 +43,28 @@
   <div class="hero__glow hero__glow--a"></div>
   <div class="hero__glow hero__glow--b"></div>
   <div class="hero__content">
-    <div class="hero__pill">Technology Industry · FY 2023 · Real Verified Data</div>
-    <h1 class="hero__title">Company Benchmark<br/>Comparison Engine</h1>
+    <div class="hero__pill">AI Policy & Ethics Focus · 2026 · Official Company Sources</div>
+    <h1 class="hero__title">Comparative Ethical<br/>Policy Auditor<br/><span style="font-size: 0.7em; opacity: 0.9;">(CEPA)</span></h1>
     <p class="hero__sub">
-      Analyze Apple &amp; Samsung across <strong>13 metrics</strong> in
-      <strong>5 categories</strong> using data from official annual reports,
-      IDC, Glassdoor, ACSI, Bain &amp; USPTO.
+      Benchmark <strong>6 AI companies</strong> on their official policies across <strong>4 ethical dimensions</strong> —
+      privacy protection, transparency, liability & safety, and user rights — backed by real policy analysis.
     </p>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════════
+     DATA INTEGRITY BANNER
+════════════════════════════════════════════ -->
+<div class="integrity-banner">
+  <div class="integrity-banner__inner">
+    <span class="integrity-banner__icon">⚠️</span>
+    <div class="integrity-banner__content">
+      <strong>Data Integrity Notice:</strong> This benchmark is based on our analysis of publicly available policies. 
+      <strong>Click "View Evidence" to verify each rating against official policy documents.</strong>
+      If you find inaccuracies, please report them — we prioritize truthfulness over appearance.
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════
      COMPARE FORM
@@ -64,8 +77,12 @@
       <div class="form-group">
         <label for="sel-a">Company A</label>
         <select id="sel-a">
-          <option value="apple">🍎 Apple Inc. (AAPL)</option>
-          <option value="samsung">📱 Samsung Electronics</option>
+          <option value="perplexity">Perplexity AI</option>
+          <option value="openai">OpenAI</option>
+          <option value="anthropic">Anthropic</option>
+          <option value="google">Google</option>
+          <option value="meta">Meta Platforms</option>
+          <option value="deepseek">DeepSeek</option>
         </select>
       </div>
 
@@ -74,20 +91,19 @@
       <div class="form-group">
         <label for="sel-b">Company B</label>
         <select id="sel-b">
-          <option value="samsung">📱 Samsung Electronics</option>
-          <option value="apple">🍎 Apple Inc. (AAPL)</option>
+          <option value="openai">OpenAI</option>
+          <option value="perplexity">Perplexity AI</option>
+          <option value="anthropic">Anthropic</option>
+          <option value="google">Google</option>
+          <option value="meta">Meta Platforms</option>
+          <option value="deepseek">DeepSeek</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="sel-cat">Benchmark Category</label>
         <select id="sel-cat">
-          <option value="all">All Categories</option>
-          <option value="financial">💰 Financial</option>
-          <option value="performance">📈 Performance</option>
-          <option value="internal">👥 Internal / HR</option>
-          <option value="customer">⭐ Customer</option>
-          <option value="innovation">🔬 Innovation</option>
+          <option value="ai_policy" selected>AI Policy & Ethics (Default)</option>
         </select>
       </div>
 
@@ -117,6 +133,9 @@
       <div class="score-grid">
 
         <div class="score-card score-card--a" id="sc-a">
+          <div class="score-card__logo">
+            <img id="logo-a" src="" alt="Company A" />
+          </div>
           <div class="score-card__winner-tag" id="winner-tag-a" style="display:none">🏆 Winner</div>
           <div class="score-card__company" id="sc-name-a">—</div>
           <div class="score-card__value"   id="sc-val-a">—</div>
@@ -133,6 +152,9 @@
         </div>
 
         <div class="score-card score-card--b" id="sc-b">
+          <div class="score-card__logo">
+            <img id="logo-b" src="" alt="Company B" />
+          </div>
           <div class="score-card__winner-tag" id="winner-tag-b" style="display:none">🏆 Winner</div>
           <div class="score-card__company" id="sc-name-b">—</div>
           <div class="score-card__value"   id="sc-val-b">—</div>
@@ -179,11 +201,29 @@
     </div>
   </section>
 
+  <!-- ── CONCERNING POLICIES ── -->
+  <section class="concerns-section">
+    <div class="wrap">
+      <h2 class="section-title">⚠️ Concerning Policies & Red Flags</h2>
+      <p class="section-subtitle">Key policy concerns and potential limitations in each company's AI ethics framework</p>
+      <div class="concerns-grid" id="concerns-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── POLICY SOURCES ── -->
+  <section class="policy-docs-section">
+    <div class="wrap">
+      <h2 class="section-title">📄 Policy Documents & Source Links</h2>
+      <p class="section-subtitle">Direct links to official policy documents for independent verification</p>
+      <div class="policy-docs-grid" id="policy-docs-grid"></div>
+    </div>
+  </section>
+
   <!-- ── DATA SOURCES ── -->
   <section class="sources-section">
     <div class="wrap">
-      <h2 class="section-title">📚 Data Sources & Methodology</h2>
-      <p class="sources-note">All data from FY 2023. Samsung financial figures converted from KRW at avg 2023 rate ≈ 1,305 KRW/USD.</p>
+      <h2 class="section-title">📚 AI Policy Sources & Methodology</h2>
+      <p class="sources-note">All scores based on official AI policy documents. No financial or corporate metrics included - focus is purely on AI ethics & policy commitments.</p>
       <div class="sources-list" id="sources-list"></div>
     </div>
   </section>
@@ -195,8 +235,8 @@
 ════════════════════════════════════════════ -->
 <footer class="site-footer">
   <div class="wrap">
-    <p>BenchmarkIQ &nbsp;·&nbsp; Python Flask + Chart.js &nbsp;·&nbsp; Data: FY 2023</p>
-    <p class="site-footer__note">For educational and analytical purposes only. Not financial advice.</p>
+    <p>CEPA — Comparative Ethical Policy Auditor &nbsp;·&nbsp; AI Policy Benchmarking &nbsp;·&nbsp; 2026</p>
+    <p class="site-footer__note">Analysis of official company AI policies for educational and research purposes. See POLICY_LINKS.md for sources.</p>
   </div>
 </footer>
 

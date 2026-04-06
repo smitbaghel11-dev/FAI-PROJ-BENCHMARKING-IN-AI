@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "benchmark_name": "AI Policy & Ethics Benchmark",
+    "version": "1.0",
+    "focus": "Honest evaluation of AI company policies based on verifiable public information",
+    "data_year": 2026,
+    "update_date": "2026-04-05",
+    "note": "This benchmark is under construction. Each rating must be backed by direct policy quotes and URLs. Confidence intervals reflect uncertainty. If a company's policy is not publicly available or unclear, that is reflected in the rating.",
+    "methodology_url": "https://github.com/smitbaghel11-dev/FAI-PROJ-BENCHMARKING-IN-AI/blob/main/BENCHMARK_FRAMEWORK.md",
+    "last_verification_date": "2026-04-05",
+    "verification_status": "IN PROGRESS - AWAITING POLICY RESEARCH"
+  },
+  "dimensions": [
+    {
+      "id": "privacy",
+      "name": "Privacy & Data Protection",
+      "description": "How does the company handle user data? Are there transparency requirements, opt-out options, and clear data minimization practices?",
+      "weight": 1.0
+    },
+    {
+      "id": "transparency",
+      "name": "Transparency & Disclosure",
+      "description": "How openly does the company communicate about their AI systems, limitations, and practices?",
+      "weight": 1.0
+    },
+    {
+      "id": "liability",
+      "name": "Liability & Safety",
+      "description": "How does the company handle responsibility for AI harms and implement safety measures?",
+      "weight": 1.0
+    },
+    {
+      "id": "user_rights",
+      "name": "User Rights & Control",
+      "description": "What data rights do users have? Can they delete data, export it, and control how it's used?",
+      "weight": 1.0
+    },
+    {
+      "id": "government",
+      "name": "Government Transparency & Accountability",
+      "description": "How transparent is the company about government data requests and contracts?",
+      "weight": 1.0
+    },
+    {
+      "id": "ethics",
+      "name": "Values & Ethical Commitment",
+      "description": "Does the company demonstrate commitment to ethical AI through research, practices, and long-term accountability?",
+      "weight": 1.0
+    }
+  ],
+  "companies": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "founded": 2015,
+      "hq": "San Francisco, CA, USA",
+      "website": "https://openai.com",
+      "policy_pages": {
+        "privacy": "https://openai.com/privacy",
+        "terms": "https://openai.com/terms",
+        "safety": "https://openai.com/safety",
+        "research": "https://openai.com/research"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "founded": 2021,
+      "hq": "San Francisco, CA, USA",
+      "website": "https://www.anthropic.com",
+      "policy_pages": {
+        "privacy": "https://www.anthropic.com/privacy",
+        "terms": "https://www.anthropic.com/terms",
+        "safety": "https://www.anthropic.com/safety",
+        "research": "https://www.anthropic.com/research"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    },
+    {
+      "id": "google",
+      "name": "Google / DeepMind",
+      "founded": 1998,
+      "hq": "Mountain View, CA, USA",
+      "website": "https://google.com",
+      "policy_pages": {
+        "privacy": "https://policies.google.com/privacy",
+        "terms": "https://policies.google.com/terms",
+        "ai_principles": "https://ai.google/principles/",
+        "research": "https://research.google/"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    },
+    {
+      "id": "meta",
+      "name": "Meta Platforms",
+      "founded": 2004,
+      "hq": "Menlo Park, CA, USA",
+      "website": "https://www.meta.com",
+      "policy_pages": {
+        "privacy": "https://www.facebook.com/privacy",
+        "terms": "https://www.facebook.com/terms",
+        "ai": "https://www.meta.com/ai/",
+        "research": "https://research.meta.com/"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity AI",
+      "founded": 2022,
+      "hq": "San Francisco, CA, USA",
+      "website": "https://www.perplexity.ai",
+      "policy_pages": {
+        "privacy": "https://www.perplexity.ai/privacy",
+        "terms": "https://www.perplexity.ai/terms",
+        "help": "https://www.perplexity.ai/help",
+        "blog": "https://blog.perplexity.ai"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "founded": 2023,
+      "hq": "Hangzhou, China",
+      "website": "https://www.deepseek.com",
+      "policy_pages": {
+        "privacy": "https://www.deepseek.com/privacy",
+        "terms": "https://www.deepseek.com/terms",
+        "main": "https://www.deepseek.com/"
+      },
+      "ratings": {
+        "privacy": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "transparency": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "liability": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "user_rights": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "government": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        },
+        "ethics": {
+          "score": null,
+          "confidence_interval": null,
+          "verification_status": "NEEDS RESEARCH",
+          "evidence": [],
+          "reasoning": "Awaiting policy research",
+          "gaps": "Not yet evaluated"
+        }
+      }
+    }
+  ]
+}

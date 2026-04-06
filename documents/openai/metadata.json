@@ -1,0 +1,23 @@
+{
+  "company": "OpenAI",
+  "ticker": "PRIVATE",
+  "fetched_at": "2026-04-05T17:42:30.484118",
+  "policies": {
+    "terms_of_service": {
+      "url": "https://openai.com/policies/terms-of-use",
+      "status": "failed_to_fetch"
+    },
+    "privacy_policy": {
+      "url": "https://openai.com/policies/privacy-policy",
+      "status": "failed_to_fetch"
+    },
+    "usage_policies": {
+      "url": "https://openai.com/policies/usage-policies",
+      "status": "failed_to_fetch"
+    },
+    "api_terms": {
+      "url": "https://openai.com/policies/api-terms",
+      "status": "failed_to_fetch"
+    }
+  }
+}
